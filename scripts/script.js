@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    /*
     // Відслідковуємо кліки на посиланнях у меню
     document.querySelectorAll('header a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollToElement(targetElement);
         }
     });
-
+*/
 // logo scrollers
     const scrollers = document.querySelectorAll(".scroller");
 
@@ -120,6 +121,39 @@ document.addEventListener("DOMContentLoaded", () => {
     //         buttonMobileMenu.classList.toggle('open');
     //     });
     // });
+
+
+//start menu
+
+    console.log('sub-menu')
+// Отримуємо всі елементи підменю
+    const subMenus = document.querySelectorAll('.sub-menu');
+
+// Перебираємо кожен пункт меню і додаємо обробник подій для відображення підменю
+    subMenus.forEach(subMenu => {
+        const menuItem = subMenu.closest('li');
+        menuItem.addEventListener('mouseenter', () => {
+            subMenu.style.display = 'flex';
+        });
+        menuItem.addEventListener('mouseleave', () => {
+            subMenu.style.display = 'none';
+        });
+    });
+
+    // Створюємо елемент <img> для зображення chevron-down-menu.svg
+    const chevronIcon = document.createElement('img');
+    chevronIcon.src = 'image/chevron-down-menu.svg';
+    chevronIcon.alt = 'Chevron Down Icon';
+    chevronIcon.classList.add('chevron-down-icon');
+
+// Знаходимо всі елементи меню, які мають підменю
+    const menuItemsWithSubmenu = document.querySelectorAll('.menu-items .has-submenu');
+
+// Додаємо зображення chevron до кожного елемента меню з підменю
+    menuItemsWithSubmenu.forEach(menuItem => {
+        menuItem.appendChild(chevronIcon.cloneNode(true)); // Додаємо клонований елемент для кожного елемента меню
+    });
+//end menu
 
 //mobile menu
     const buttonMobileMenu = document.querySelector('.button-mobile-menu');
