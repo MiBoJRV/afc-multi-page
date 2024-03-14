@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Створюємо елемент <img> для зображення chevron-down-menu.svg
     const chevronIcon = document.createElement('img');
-    chevronIcon.src = 'image/chevron-down-menu.svg';
+    chevronIcon.src = 'images/chevron-down-menu.svg';
     chevronIcon.alt = 'Chevron Down Icon';
     chevronIcon.classList.add('chevron-down-icon');
 
