@@ -81,7 +81,7 @@ main {
 
     h2 {
       margin-bottom: 10px;
-      max-width: 710px;
+      max-width: 769px;
       width: 100%;
 
       color: rgba(255, 255, 255, 0.8);
@@ -143,14 +143,7 @@ main {
 }
 
 .af-center {
-  padding: 100px 40px 60px;
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-
-  &-title {
-    margin-bottom: 48px;
-  }
+  margin: 60px 40px;
 
   @media only screen and (max-width: 991px) {
     margin: 55px 15px 40px;
@@ -163,7 +156,7 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 38px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     font-family: "Merriweather";
 
     @media only screen and (max-width: 991px) {
@@ -183,7 +176,7 @@ main {
     font-style: normal;
     font-weight: 300;
     line-height: 29px;
-    max-width: 688px;
+    max-width: 896px;
     width: 100%;
     margin: 0 auto;
 
@@ -192,52 +185,70 @@ main {
       margin: 0;
     }
   }
+}
+
+.types {
+  padding: 60px 40px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    color: #0B0F11;
+    text-align: center;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    font-family: "Merriweather";
+    margin-bottom: 58px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 16px;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+      text-align: left;
+    }
+  }
 
   &-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 4px;
 
     &-item {
-      max-width: 440px;
+      max-width: 450px;
       width: 100%;
-      border: 1px solid #AABCC8;
-      background: #FFF;
+      background: #F2F5F7;
       padding: 40px;
 
       img {
-        margin-bottom: 32px;
+        margin-bottom: 16px;
       }
 
       h3 {
-        color: #1F3143;
+        color: #0B0F11;
         font-family: Merriweather;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: 32px;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
       }
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-
-        li {
-          color: rgba(11, 15, 17, 0.8);
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 24px;
-          list-style: disc;
-          margin-left: 18px;
-        }
+      p {
+        color: rgba(11, 15, 17, 0.8);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+        max-width: 342px;
+        width: 100%;
       }
     }
   }
-
 }
 
 .aspects {
@@ -338,6 +349,140 @@ main {
 
 
 }
+
+.why {
+  padding: 60px 40px 120px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    color: #0B0F11;
+    text-align: center;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 64px;
+    font-family: "Merriweather";
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 16px;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+      text-align: left;
+    }
+  }
+
+  &-content {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    gap: 45px;
+  }
+
+  &-list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 48px;
+
+    &-item {
+      display: flex;
+      gap: 32px;
+
+      img {
+
+      }
+
+      h3 {
+        color: #0B0F11;
+        font-family: Merriweather;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #0B0F11;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+      }
+
+    }
+  }
+
+  &-contact {
+    background: linear-gradient(180deg, #E2A328 0%, #E5B04A 100%);
+    padding: 40px;
+
+    flex: 1;
+
+    h3 {
+      color: #402D0A;
+      font-family: Merriweather;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px;
+      margin-bottom: 26px;
+      position: relative;
+      padding-left: 40px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        background-image: url("../images/exclamation.svg");
+      }
+    }
+
+    p {
+      color: #402D0A;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 27px; /* 150% */
+
+      max-width: 590px;
+      width: 100%;
+      &:first-of-type {
+        margin-bottom: 10px;
+      }
+    }
+
+    .why-btn {
+      margin-top: 58px;
+
+      a {
+        display: inline-block;
+        padding: 20px 28px;
+        border-radius: 4px;
+        background: #FFF;
+        box-shadow: 4px 4px 0px 0px rgba(15, 21, 27, 0.20);
+
+        color: #402D0A;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+      }
+    }
+
+
+  }
+
+}
+
 
 .survey {
   padding: 0 40px ;
@@ -1368,4 +1513,3 @@ main {
     }
   }
 }
-
