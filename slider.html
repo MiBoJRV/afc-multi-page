@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+<!-- Swiper -->
+<div class="testimonials swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="testimonials-slide">
+                <p>After falling victim to a sophisticated romance scam, I felt lost and helpless. But thanks to
+                    the
+                    Anti-Fraud Centre's swift action and unwavering support, I was able to recover a significant
+                    portion
+                    of my lost funds. Their dedication to combating online financial fraud is truly
+                    commendable.</p>
+                <div class="user">
+                    <img src="images/avatar-1.png" alt="avatar">
+                    <div class="user-name">
+                        <p>Emily S.</p>
+                        <p>USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="testimonials-slide">
+                <p>After falling victim to a sophisticated romance scam, I felt lost and helpless. But thanks to
+                    the
+                    Anti-Fraud Centre's swift action and unwavering support, I was able to recover a significant
+                    portion
+                    of my lost funds. Their dedication to combating online financial fraud is truly
+                    commendable.</p>
+                <div class="user">
+                    <img src="images/avatar-1.png" alt="avatar">
+                    <div class="user-name">
+                        <p>Emily S.</p>
+                        <p>USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="testimonials-slide">
+                <p>After falling victim to a sophisticated romance scam, I felt lost and helpless. But thanks to
+                    the
+                    Anti-Fraud Centre's swift action and unwavering support, I was able to recover a significant
+                    portion
+                    of my lost funds. Their dedication to combating online financial fraud is truly
+                    commendable.</p>
+                <div class="user">
+                    <img src="images/avatar-1.png" alt="avatar">
+                    <div class="user-name">
+                        <p>Emily S.</p>
+                        <p>USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="testimonials-slide">
+                <p>After falling victim to a sophisticated romance scam, I felt lost and helpless. But thanks to
+                    the
+                    Anti-Fraud Centre's swift action and unwavering support, I was able to recover a significant
+                    portion
+                    of my lost funds. Their dedication to combating online financial fraud is truly
+                    commendable.</p>
+                <div class="user">
+                    <img src="images/avatar-1.png" alt="avatar">
+                    <div class="user-name">
+                        <p>Emily S.</p>
+                        <p>USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+</main>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    let swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        spaceBetween: 40,
+        loopedSlides: 2,
+        slidesPerView: 3,
+        loop: true,
+        centeredSlides: true,
+        centeredSlidesBounds: true
+    });
+</script>
+</body>
+
+</html>
