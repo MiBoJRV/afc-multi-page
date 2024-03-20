@@ -227,7 +227,10 @@ main {
 }
 
 .af-center {
-  margin: 60px 40px;
+  padding: 0px 40px 60px;
+}
+.af-center.af-center-1 {
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 991px) {
   .af-center {
@@ -264,9 +267,6 @@ main {
   max-width: 896px;
   width: 100%;
   margin: 0 auto;
-}
-.af-center p:first-of-type {
-  margin-bottom: 20px;
 }
 @media only screen and (max-width: 991px) {
   .af-center p {
@@ -340,6 +340,115 @@ main {
 }
 .types-list-item p:nth-of-type(2) {
   margin-top: 10px;
+}
+
+.team-members {
+  padding: 60px 24px 100px;
+}
+@media only screen and (max-width: 991px) {
+  .team-members {
+    padding: 55px 15px 80px;
+  }
+}
+.team-members-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  .team-members-list {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+}
+.team-members-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 340px;
+  width: 100%;
+  border: 1px solid #AABCC8;
+  padding: 40px;
+}
+.team-members-list-item:not(:first-of-type) {
+  border-left: none;
+}
+@media only screen and (max-width: 991px) {
+  .team-members-list-item {
+    width: calc(50% - 10px);
+    max-width: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .team-members-list-item {
+    width: 100%;
+  }
+}
+.team-members-list-item img {
+  margin-bottom: 24px;
+}
+.team-members-list-item h3 {
+  color: #0B0F11;
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.team-members-list-item h4 {
+  color: rgba(31, 49, 67, 0.7);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+.team-members-list-item p {
+  color: rgba(11, 15, 17, 0.7);
+  text-align: justify;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.team-members h2 {
+  color: #0B0F11;
+  text-align: center;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: Merriweather;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+@media only screen and (max-width: 991px) {
+  .team-members h2 {
+    margin-bottom: 55px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+.team-members h2 span {
+  font-size: 38px;
+  font-style: normal;
+  line-height: 40px;
+  margin-bottom: 80px;
+  font-family: Merriweather;
+  font-weight: 700;
+}
+@media only screen and (max-width: 991px) {
+  .team-members h2 span {
+    font-size: 32px;
+    font-style: normal;
+    line-height: 40px;
+  }
 }
 
 .survey {
@@ -1211,4 +1320,4 @@ main {
   background-color: #8F0000;
 }
 
-/*# sourceMappingURL=about-us.css.map */
+/*# sourceMappingURL=our-team.css.map */
