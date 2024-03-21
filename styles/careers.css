@@ -1,0 +1,162 @@
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.banner {
+  background: #eaeff2;
+  padding: 49px 40px;
+}
+.banner h2 {
+  color: rgba(11, 15, 17, 0.7);
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 8px;
+}
+.banner h1 {
+  color: #0B0F11;
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+}
+
+.careers {
+  padding: 34px 40px;
+  /*Accordion*/
+}
+.careers-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+.careers .list-block {
+  border-bottom: 1px solid #AABCC8;
+  padding: 28px 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding-bottom 0.3s ease-out;
+}
+.careers .list-block:last-of-type {
+  margin: 0;
+}
+.careers .list-block.open .list {
+  margin-top: 24px;
+}
+@media only screen and (max-width: 991px) {
+  .careers .list-block.active {
+    min-height: auto;
+  }
+}
+.careers .list-block.active .list-block-icon {
+  border-bottom: 2px solid #231F20;
+}
+.careers .list-block-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 48px;
+}
+.careers .list-block-title h4 {
+  color: #1F3143;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+@media only screen and (max-width: 991px) {
+  .careers .list-block-title h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+.careers .list-block-title p {
+  color: rgba(11, 15, 17, 0.8);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.careers .list-block-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 24px;
+  width: 24px;
+}
+.careers .list-block-icon img {
+  width: 24px;
+  height: 24px;
+}
+.careers .list-block .list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
+  opacity: 1;
+}
+.careers .list-block .list h5 {
+  color: #0B0F11;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+.careers .list-block .list p {
+  color: #0B0F11;
+  font-family: "Merriweather Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.careers .list-block .list a {
+  color: #315576;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+.careers .list-block .list ul {
+  padding-left: 30px;
+}
+.careers .list-block .list ul li {
+  color: #0B0F11;
+  font-family: "Merriweather Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 8px;
+  list-style: disc;
+}
+.careers .list-block .list-item {
+  color: #231F20;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 4px;
+  list-style: disc outside;
+}
+@media only screen and (max-width: 991px) {
+  .careers .list-block .list-item {
+    font-size: 16px;
+    letter-spacing: 3.2px;
+  }
+}
+
+/*# sourceMappingURL=careers.css.map */
