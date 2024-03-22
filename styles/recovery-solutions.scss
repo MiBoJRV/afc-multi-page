@@ -9,11 +9,6 @@ main {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  //padding-bottom: 40px;
-
-  @media only screen and (max-width: 991px) {
-    padding-bottom: 24px;
-  }
 
   .background {
     position: absolute;
@@ -37,7 +32,7 @@ main {
     padding: 116px 40px;
 
     @media only screen and (max-width: 991px) {
-      padding: 40px 15px;
+      padding: 40px 15px 410px;
     }
 
     h1 {
@@ -70,6 +65,7 @@ main {
           @media only screen and (max-width: 991px) {
             font-size: 20px;
             line-height: 20px;
+            margin-bottom: 14px;
           }
         }
 
@@ -80,19 +76,18 @@ main {
     }
 
     h2 {
-      margin-bottom: 10px;
       max-width: 710px;
       width: 100%;
-
       color: rgba(255, 255, 255, 0.8);
       font-size: 20px;
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
+      margin-bottom: 10px;
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -104,9 +99,7 @@ main {
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -148,12 +141,12 @@ main {
   width: 100%;
   margin: 0 auto;
 
-  &-title {
-    margin-bottom: 48px;
+  @media only screen and (max-width: 991px) {
+    padding: 43px 15px 0;
   }
 
-  @media only screen and (max-width: 991px) {
-    margin: 55px 15px 40px;
+  &-title {
+    margin-bottom: 48px;
   }
 
   h2 {
@@ -172,7 +165,6 @@ main {
       font-style: normal;
       font-weight: 400;
       line-height: 40px;
-      text-align: left;
     }
   }
 
@@ -188,8 +180,7 @@ main {
     margin: 0 auto;
 
     @media only screen and (max-width: 991px) {
-      text-align: left;
-      margin: 0;
+
     }
   }
 
@@ -199,12 +190,25 @@ main {
     justify-content: center;
     gap: 20px;
 
+    @media only screen and (max-width: 991px) {
+      gap: 8px;
+    }
+
     &-item {
-      max-width: 440px;
+      position: relative;
       width: 100%;
       border: 1px solid #AABCC8;
       background: #FFF;
       padding: 40px;
+      max-width: calc(100% / 3 - 14px);
+      //overflow: hidden;
+
+      @media only screen and (max-width: 1199px) {
+        max-width: calc(100% / 2 - 14px);
+      }
+      @media only screen and (max-width: 991px) {
+        max-width: 100%;
+      }
 
       img {
         margin-bottom: 32px;
@@ -233,6 +237,64 @@ main {
           line-height: 24px;
           list-style: disc;
           margin-left: 18px;
+        }
+      }
+
+      &:hover {
+        .hover-content {
+          opacity: 1;
+          //transform: translateY(0);
+          transition: all 0.3s ease;
+          z-index: 100;
+        }
+      }
+
+      .hover-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        width: 100%;
+        opacity: 0;
+        //transform: translateY(100%);
+        z-index: 0;
+        cursor: pointer;
+        display: flex;
+        outline: 1px solid #1F3143;
+        outline-offset: 0;
+        
+        @media only screen and (max-width: 991px) {
+          position: relative;
+          top: auto;
+          left: 0;
+          height: auto;
+          width: auto;
+          opacity: 1;
+          z-index: 100;
+          cursor: pointer;
+          display: flex;
+          margin: 78px -41px -41px;
+          outline: 1px solid #1F3143;
+          outline-offset: -1px;
+        }
+
+        a {
+          margin-top: auto;
+          width: 100%;
+        }
+
+        .btn {
+          background: #1F3143;
+          color: #ffffff;
+          color: #FFF;
+          text-align: center;
+          font-family: "Merriweather Sans";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          padding: 20px 28px;
+
         }
       }
     }
@@ -288,6 +350,11 @@ main {
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
+        
+        @media only screen and (max-width:991px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
 
       p {
@@ -340,7 +407,7 @@ main {
 }
 
 .survey {
-  padding: 0 40px ;
+  padding: 0 40px;
 
   @media only screen and (max-width: 991px) {
     padding: 0 15px 55px;

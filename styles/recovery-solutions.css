@@ -10,11 +10,6 @@ main {
   position: relative;
   overflow: hidden;
 }
-@media only screen and (max-width: 991px) {
-  .banner {
-    padding-bottom: 24px;
-  }
-}
 .banner .background {
   position: absolute;
   width: 100%;
@@ -35,7 +30,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .banner-content {
-    padding: 40px 15px;
+    padding: 40px 15px 410px;
   }
 }
 .banner-content h1 {
@@ -69,13 +64,13 @@ main {
   .banner-content h1 span:nth-of-type(1) {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 14px;
   }
 }
 .banner-content h1 span:nth-of-type(2) {
   font-weight: 700;
 }
 .banner-content h2 {
-  margin-bottom: 10px;
   max-width: 710px;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
@@ -83,11 +78,12 @@ main {
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 991px) {
   .banner-content h2 {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 24px;
   }
 }
 .banner-content p {
@@ -99,9 +95,7 @@ main {
 @media only screen and (max-width: 991px) {
   .banner-content p {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
+    line-height: 24px;
   }
 }
 .banner-content .button-survey {
@@ -136,13 +130,13 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-.af-center-title {
-  margin-bottom: 48px;
-}
 @media only screen and (max-width: 991px) {
   .af-center {
-    margin: 55px 15px 40px;
+    padding: 43px 15px 0;
   }
+}
+.af-center-title {
+  margin-bottom: 48px;
 }
 .af-center h2 {
   color: #0B0F11;
@@ -161,7 +155,6 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    text-align: left;
   }
 }
 .af-center p {
@@ -175,24 +168,34 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 991px) {
-  .af-center p {
-    text-align: left;
-    margin: 0;
-  }
-}
 .af-center-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
+@media only screen and (max-width: 991px) {
+  .af-center-list {
+    gap: 8px;
+  }
+}
 .af-center-list-item {
-  max-width: 440px;
+  position: relative;
   width: 100%;
   border: 1px solid #AABCC8;
   background: #FFF;
   padding: 40px;
+  max-width: calc(33.3333333333% - 14px);
+}
+@media only screen and (max-width: 1199px) {
+  .af-center-list-item {
+    max-width: calc(50% - 14px);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .af-center-list-item {
+    max-width: 100%;
+  }
 }
 .af-center-list-item img {
   margin-bottom: 32px;
@@ -219,6 +222,56 @@ main {
   line-height: 24px;
   list-style: disc;
   margin-left: 18px;
+}
+.af-center-list-item:hover .hover-content {
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+.af-center-list-item .hover-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  cursor: pointer;
+  display: flex;
+  outline: 1px solid #1F3143;
+  outline-offset: 0;
+}
+@media only screen and (max-width: 991px) {
+  .af-center-list-item .hover-content {
+    position: relative;
+    top: auto;
+    left: 0;
+    height: auto;
+    width: auto;
+    opacity: 1;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    margin: 78px -41px -41px;
+    outline: 1px solid #1F3143;
+    outline-offset: -1px;
+  }
+}
+.af-center-list-item .hover-content a {
+  margin-top: auto;
+  width: 100%;
+}
+.af-center-list-item .hover-content .btn {
+  background: #1F3143;
+  color: #ffffff;
+  color: #FFF;
+  text-align: center;
+  font-family: "Merriweather Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 20px 28px;
 }
 
 .aspects {
@@ -272,6 +325,12 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+}
+@media only screen and (max-width: 991px) {
+  .aspects-list-item h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .aspects-list-item p {
   color: rgba(11, 15, 17, 0.7);
