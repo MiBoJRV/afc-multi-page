@@ -90,133 +90,76 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // const buttonMobileMenu = document.querySelector('.button-mobile-menu');
-    // const mobileContent = document.querySelector('.mobile-content');
-    // const mobileMenuLinks = document.querySelectorAll('.mobile-content-menu a');
-    //
-    // let isMobileMenuOpen = false;
-    //
-    // // Функція для відкриття/закриття мобільного меню
-    // function toggleMobileMenu() {
-    //     if (isMobileMenuOpen) {
-    //         mobileContent.classList.remove('open');
-    //         document.body.style.overflow = '';
-    //     } else {
-    //         mobileContent.classList.add('open');
-    //         document.body.style.overflow = 'hidden';
-    //     }
-    //     isMobileMenuOpen = !isMobileMenuOpen;
-    // }
-    //
-    // // Обробник кліку на кнопку мобільного меню
-    // buttonMobileMenu.addEventListener('click', function () {
-    //     buttonMobileMenu.classList.toggle('open');
-    //     toggleMobileMenu();
-    // });
-    //
-    // // Обробник кліку на посилання в мобільному меню
-    // mobileMenuLinks.forEach(function (link) {
-    //     link.addEventListener('click', function () {
-    //         toggleMobileMenu();
-    //         buttonMobileMenu.classList.toggle('open');
-    //     });
-    // });
-
-
-//start menu
-
-    console.log('sub-menu')
-// Отримуємо всі елементи підменю
-    const subMenus = document.querySelectorAll('.sub-menu');
-
-// Перебираємо кожен пункт меню і додаємо обробник подій для відображення підменю
-    subMenus.forEach(subMenu => {
-        const menuItem = subMenu.closest('li');
-        menuItem.addEventListener('mouseenter', () => {
-            subMenu.style.display = 'flex';
-        });
-        menuItem.addEventListener('mouseleave', () => {
-            subMenu.style.display = 'none';
-        });
-    });
-
-    // Створюємо елемент <img> для зображення chevron-down-menu.svg
-    const chevronIcon = document.createElement('img');
-    chevronIcon.src = 'images/chevron-down-menu.svg';
-    chevronIcon.alt = 'Chevron Down Icon';
-    chevronIcon.classList.add('chevron-down-icon');
-
-// Знаходимо всі елементи меню, які мають підменю
-    const menuItemsWithSubmenu = document.querySelectorAll('.menu-items .has-submenu');
-
-// Додаємо зображення chevron до кожного елемента меню з підменю
-    menuItemsWithSubmenu.forEach(menuItem => {
-        menuItem.appendChild(chevronIcon.cloneNode(true)); // Додаємо клонований елемент для кожного елемента меню
-    });
-//end menu
-
-//mobile menu
-    const buttonMobileMenu = document.querySelector('.button-mobile-menu');
+ /*   const buttonMobileMenu = document.querySelector('.button-mobile-menu');
     const mobileContent = document.querySelector('.mobile-content');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-content a');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-content-menu a');
 
     let isMobileMenuOpen = false;
 
     // Функція для відкриття/закриття мобільного меню
     function toggleMobileMenu() {
-        mobileContent.classList.toggle('open');
-        document.body.style.overflow = mobileContent.classList.contains('open') ? 'hidden' : '';
+        if (isMobileMenuOpen) {
+            mobileContent.classList.remove('open');
+            document.body.style.overflow = '';
+        } else {
+            mobileContent.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        isMobileMenuOpen = !isMobileMenuOpen;
     }
 
     // Обробник кліку на кнопку мобільного меню
     buttonMobileMenu.addEventListener('click', function () {
-        toggleMobileMenu();
         buttonMobileMenu.classList.toggle('open');
-
+        toggleMobileMenu();
     });
 
     // Обробник кліку на посилання в мобільному меню
     mobileMenuLinks.forEach(function (link) {
         link.addEventListener('click', function () {
             toggleMobileMenu();
-            buttonMobileMenu.classList.remove('open');
-            document.body.style.overflow = ''; // Забираємо overflow: hidden
+            buttonMobileMenu.classList.toggle('open');
+        });
+    });*/
+
+
+
+
+/*
+    // Dialog
+    const dialog = document.querySelector(".dialog");
+    const dialogBtns = document.querySelectorAll(".link a");
+    const dialogClose = document.querySelector(".dialog__close");
+    const dialogContent = document.querySelector(".dialog__content");
+    const body = document.querySelector('body');
+
+    dialogBtns.forEach(btn => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            dialog.style.display = "flex";
+            body.style.overflow = 'hidden'
         });
     });
 
-    // Dialog
-    // const dialog = document.querySelector(".dialog");
-    // const dialogBtns = document.querySelectorAll(".link a");
-    // const dialogClose = document.querySelector(".dialog__close");
-    // const dialogContent = document.querySelector(".dialog__content");
-    // const body = document.querySelector('body');
-    //
-    // dialogBtns.forEach(btn => {
-    //     btn.addEventListener("click", (event) => {
-    //         event.preventDefault();
-    //         dialog.style.display = "flex";
-    //         body.style.overflow = 'hidden'
-    //     });
-    // });
-    //
-    // dialogClose.addEventListener("click", (event) => {
-    //     event.stopPropagation();
-    //     hideDialog();
-    // });
-    //
-    // body.addEventListener("click", (event) => {
-    //     if (!dialogContent.contains(event.target) && dialog.contains(event.target)) {
-    //         hideDialog();
-    //     }
-    // });
-    // document.addEventListener('keydown', function (event) {
-    //     if (event.key === "Escape") {
-    //         hideDialog();
-    //     }
-    // });
-    //
-    // function hideDialog() {
-    //     dialog.style.display = "none";
-    //     body.style.overflow = 'auto';
-    // }
+    dialogClose.addEventListener("click", (event) => {
+        event.stopPropagation();
+        hideDialog();
+    });
+
+    body.addEventListener("click", (event) => {
+        if (!dialogContent.contains(event.target) && dialog.contains(event.target)) {
+            hideDialog();
+        }
+    });
+    document.addEventListener('keydown', function (event) {
+        if (event.key === "Escape") {
+            hideDialog();
+        }
+    });
+
+    function hideDialog() {
+        dialog.style.display = "none";
+        body.style.overflow = 'auto';
+    }*/
 });
+

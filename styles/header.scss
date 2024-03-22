@@ -131,7 +131,7 @@ header {
               line-height: 100%;
               color: #fff;
               white-space: nowrap;
-              padding: 22px 24px;
+              padding: 22px 0px;
               width: 100%;
 
 
@@ -227,6 +227,11 @@ header {
     }
 
     .sign-in {
+      white-space: nowrap;
+      
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
       a {
         color: #FFF;
         font-size: 14px;
@@ -353,9 +358,8 @@ header {
     z-index: 99;
     padding: 15px;
     //max-height: 0;
-    overflow: hidden;
+    overflow-y: scroll;
     transition: max-height 0.8s ease;
-
     flex-direction: column;
     height: 100vh;
     position: fixed;
@@ -363,10 +367,12 @@ header {
     top: 0;
     display: none;
 
+    @media only screen and (min-width: 992px) {
+      display: none !important;
+    }
+
     &.open {
       display: flex;
-      //max-height: none;
-      //padding: 15px;
     }
 
     .logo {
@@ -380,20 +386,94 @@ header {
       nav {
         ul {
           li {
-            height: 60px;
+            //height: 60px;
             display: flex;
-            align-items: center;
+            //align-items: center;
             justify-content: center;
+            flex-direction: column;
             border-bottom: 1px solid #e6e6e6;
+            position: relative;
+            padding: 22px 0;
+
+            &.has-submenu.mobile {
+
+              &.open {
+                padding-bottom: 0;
+                border-bottom: none;
+              }
+
+              .chevron-down-icon {
+                position: absolute;
+                right: 0;
+                top: 19px;
+              }
+
+            }
+
+            .sub-menu {
+              flex-direction: column;
+              width: 100%;
+              display: none;
+
+
+              li {
+                padding-left: 42px;
+
+                &:nth-of-type(1) {
+                  border-top: 1px solid #e6e6e6;
+                  margin-top: 22px;
+                }
+              }
+
+              a {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 100%;
+                color: #0b0f11;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+
+              &.submenu-icon {
+                li {
+                  padding-left: 0;
+
+                  img {
+                    width: 28px;
+                    height: 24px;
+                  }
+                }
+              }
+            }
 
             a {
-              font-weight: 300;
+              font-weight: 400;
               font-size: 16px;
               line-height: 100%;
               color: #0b0f11;
             }
           }
         }
+      }
+    }
+
+    .sign-in {
+      margin-top: auto;
+
+      a {
+        border-radius: 4px;
+        background: #EDEFF0;
+        color: #1F3143;
+        font-family: "Merriweather Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        padding: 20px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
