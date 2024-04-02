@@ -231,6 +231,7 @@ header {
     }
 
     .sign-in {
+      display: none;
       white-space: nowrap;
       
       @media only screen and (max-width: 991px) {
@@ -463,6 +464,7 @@ header {
     }
 
     .sign-in {
+      display: none;
       margin-top: auto;
 
       a {

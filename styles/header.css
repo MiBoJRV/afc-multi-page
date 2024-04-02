@@ -181,6 +181,7 @@ header .content .menu nav ul li .sub-menu li a {
   padding: 0;
 }
 header .content .sign-in {
+  display: none;
   white-space: nowrap;
 }
 @media only screen and (max-width: 991px) {
@@ -365,6 +366,7 @@ header .mobile-content .menu nav ul li a {
   color: #0b0f11;
 }
 header .mobile-content .sign-in {
+  display: none;
   margin-top: auto;
 }
 header .mobile-content .sign-in a {
