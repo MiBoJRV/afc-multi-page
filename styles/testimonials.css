@@ -8,6 +8,11 @@ main {
   background: #eaeff2;
   padding: 49px 40px;
 }
+@media only screen and (max-width: 991px) {
+  .banner {
+    padding: 40px 27px;
+  }
+}
 .banner h2 {
   color: rgba(11, 15, 17, 0.7);
   text-align: center;
@@ -18,6 +23,13 @@ main {
   line-height: 27px;
   margin-bottom: 8px;
 }
+@media only screen and (max-width: 991px) {
+  .banner h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+}
 .banner h1 {
   color: #0B0F11;
   text-align: center;
@@ -26,6 +38,12 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 56px;
+}
+@media only screen and (max-width: 991px) {
+  .banner h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .testimonials {
@@ -36,6 +54,21 @@ main {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+}
+@media only screen and (max-width: 1100px) {
+  .testimonials {
+    padding: 40px 15px 44px;
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .testimonials {
+    width: auto !important;
+    transform: none;
+    left: 0;
+    padding: 25px 15px 44px;
+    margin-bottom: 64px;
+  }
 }
 .testimonials-slide {
   max-width: 897px;
@@ -109,13 +142,30 @@ main {
   color: #1F3143;
   top: 50%;
 }
+.testimonials .swiper-pagination {
+  bottom: 0;
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .testimonials .swiper-pagination {
+    display: block;
+  }
+}
+.testimonials .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+}
+.testimonials .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #1F3143;
+}
 
 .survey {
   padding: 0 40px;
 }
 @media only screen and (max-width: 991px) {
   .survey {
-    padding: 0 15px 55px;
+    padding: 0;
   }
 }
 .survey-help {
@@ -475,7 +525,7 @@ main {
 .survey .stepper .slide .contact-us {
   max-width: 452px;
   width: 100%;
-  background: #d8e1ea;
+  background: #F2F5F7;
   padding: 40px;
   display: flex;
   flex-direction: column;

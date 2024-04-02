@@ -15,6 +15,19 @@ main {
     width: 100%;
     height: 100%;
 
+    &-d {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-m {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -241,6 +254,8 @@ main {
       }
 
       &:hover {
+        cursor: pointer;
+
         .hover-content {
           opacity: 1;
           //transform: translateY(0);
@@ -333,7 +348,7 @@ main {
         max-width: none;
       }
 
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 768px) {
         width: 100%;
       }
 
@@ -410,7 +425,7 @@ main {
   padding: 0 40px;
 
   @media only screen and (max-width: 991px) {
-    padding: 0 15px 55px;
+    padding: 0 0 55px;
   }
 
   &-help {
@@ -810,7 +825,7 @@ main {
       .contact-us {
         max-width: 452px;
         width: 100%;
-        background: #d8e1ea;
+        background: #F2F5F7;
         padding: 40px;
         display: flex;
         flex-direction: column;

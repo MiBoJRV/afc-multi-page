@@ -10,15 +10,33 @@ main {
   position: relative;
   overflow: hidden;
 }
-@media only screen and (max-width: 991px) {
-  .banner {
-    padding-bottom: 24px;
-  }
-}
 .banner .background {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.banner .background .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .banner .background .background-d {
+    display: none;
+  }
+}
+.banner .background .background-m {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .banner .background .background-m {
+    display: block;
+  }
+}
+.banner .background .background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .banner .background img {
   width: 100%;
@@ -35,7 +53,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .banner-content {
-    padding: 40px 15px;
+    padding: 40px 15px 192px;
   }
 }
 .banner-content h1 {
@@ -69,25 +87,26 @@ main {
   .banner-content h1 span:nth-of-type(1) {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 14px;
   }
 }
 .banner-content h1 span:nth-of-type(2) {
   font-weight: 700;
 }
 .banner-content h2 {
-  margin-bottom: 10px;
-  max-width: 769px;
+  max-width: 710px;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 991px) {
   .banner-content h2 {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 24px;
   }
 }
 .banner-content p {
@@ -99,9 +118,7 @@ main {
 @media only screen and (max-width: 991px) {
   .banner-content p {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
+    line-height: 24px;
   }
 }
 .banner-content .button-survey {
@@ -135,7 +152,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .af-center {
-    margin: 55px 15px 40px;
+    margin: 43px 15px 40px;
   }
 }
 .af-center h2 {
@@ -155,10 +172,10 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    text-align: left;
   }
 }
 .af-center p {
+  font-family: "Merriweather Sans";
   color: rgba(11, 15, 17, 0.8);
   text-align: center;
   font-size: 20px;
@@ -171,7 +188,8 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .af-center p {
-    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
     margin: 0;
   }
 }
@@ -181,6 +199,11 @@ main {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  .types {
+    padding: 16px 15px 0;
+  }
 }
 .types h2 {
   color: #0B0F11;
@@ -194,12 +217,11 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .types h2 {
-    margin-bottom: 16px;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    text-align: left;
+    margin-bottom: 32px;
   }
 }
 .types-list {
@@ -207,11 +229,26 @@ main {
   flex-wrap: wrap;
   gap: 4px;
 }
+@media only screen and (max-width: 768px) {
+  .types-list {
+    gap: 8px;
+  }
+}
 .types-list-item {
-  max-width: 450px;
+  max-width: calc(33.3333333333% - 4px);
   width: 100%;
   background: #F2F5F7;
   padding: 40px;
+}
+@media only screen and (max-width: 1199px) {
+  .types-list-item {
+    max-width: calc(50% - 4px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .types-list-item {
+    max-width: 100%;
+  }
 }
 .types-list-item img {
   margin-bottom: 16px;
@@ -233,6 +270,11 @@ main {
   line-height: 24px;
   max-width: 342px;
   width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .types-list-item p {
+    max-width: 100%;
+  }
 }
 
 .aspects {
@@ -269,7 +311,7 @@ main {
     max-width: none;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .aspects-list-item {
     width: 100%;
   }
@@ -286,6 +328,12 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+}
+@media only screen and (max-width: 991px) {
+  .aspects-list-item h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .aspects-list-item p {
   color: rgba(11, 15, 17, 0.7);
@@ -336,6 +384,11 @@ main {
   width: 100%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 991px) {
+  .why {
+    padding: 0;
+  }
+}
 .why h2 {
   color: #0B0F11;
   text-align: center;
@@ -345,15 +398,15 @@ main {
   line-height: 38px;
   margin-bottom: 64px;
   font-family: "Merriweather";
+  padding: 0 15px;
 }
 @media only screen and (max-width: 991px) {
   .why h2 {
-    margin-bottom: 16px;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    text-align: left;
+    margin-bottom: 40px;
   }
 }
 .why-content {
@@ -362,15 +415,40 @@ main {
   justify-content: space-between;
   gap: 45px;
 }
+@media only screen and (max-width: 991px) {
+  .why-content {
+    flex-direction: column;
+  }
+}
 .why-list {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 48px;
 }
+@media only screen and (max-width: 991px) {
+  .why-list {
+    padding: 0 15px;
+  }
+}
 .why-list-item {
   display: flex;
   gap: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .why-list-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .why-list-item .why-text {
+    text-align: center;
+  }
+}
+.why-list-item img {
+  width: 80px;
+  height: 80px;
 }
 .why-list-item h3 {
   color: #0B0F11;
@@ -392,6 +470,12 @@ main {
   background: linear-gradient(180deg, #E2A328 0%, #E5B04A 100%);
   padding: 40px;
   flex: 1;
+}
+@media only screen and (max-width: 991px) {
+  .why-contact {
+    max-width: 100%;
+    padding: 40px 15px;
+  }
 }
 .why-contact h3 {
   color: #402D0A;
@@ -418,9 +502,14 @@ main {
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 27px; /* 150% */
+  line-height: 27px;
   max-width: 590px;
   width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .why-contact p {
+    max-width: 100%;
+  }
 }
 .why-contact p:first-of-type {
   margin-bottom: 10px;
@@ -446,7 +535,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .survey {
-    padding: 0 15px 55px;
+    padding: 0 0 55px;
   }
 }
 .survey-help {
@@ -699,6 +788,7 @@ main {
   line-height: 27px;
   text-align: left;
   margin: 0;
+  font-family: "Merriweather Sans";
 }
 .survey .stepper .step p span {
   display: inline-block;
@@ -806,7 +896,7 @@ main {
 .survey .stepper .slide .contact-us {
   max-width: 452px;
   width: 100%;
-  background: #d8e1ea;
+  background: #F2F5F7;
   padding: 40px;
   display: flex;
   flex-direction: column;

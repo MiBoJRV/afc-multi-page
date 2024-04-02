@@ -9,16 +9,25 @@ main {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  //padding-bottom: 40px;
-
-  @media only screen and (max-width: 991px) {
-    padding-bottom: 24px;
-  }
 
   .background {
     position: absolute;
     width: 100%;
     height: 100%;
+
+    &-d {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-m {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
 
     img {
       width: 100%;
@@ -37,7 +46,7 @@ main {
     padding: 116px 40px;
 
     @media only screen and (max-width: 991px) {
-      padding: 40px 15px;
+      padding: 40px 15px 192px;
     }
 
     h1 {
@@ -70,6 +79,7 @@ main {
           @media only screen and (max-width: 991px) {
             font-size: 20px;
             line-height: 20px;
+            margin-bottom: 14px;
           }
         }
 
@@ -80,19 +90,18 @@ main {
     }
 
     h2 {
-      margin-bottom: 10px;
-      max-width: 769px;
+      max-width: 710px;
       width: 100%;
-
       color: rgba(255, 255, 255, 0.8);
       font-size: 20px;
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
+      margin-bottom: 10px;
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -104,9 +113,7 @@ main {
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -148,6 +155,10 @@ main {
   width: 100%;
   margin: 0 auto;
 
+  @media only screen and (max-width: 991px) {
+    padding: 43px 15px 0;
+  }
+
   h2 {
     color: #0B0F11;
     text-align: center;
@@ -156,16 +167,16 @@ main {
     font-weight: 400;
     line-height: 48px;
     font-family: "Merriweather";
-    max-width: 650px;
+    max-width: 600px;
+    width: 100%;
     margin: 0 auto 58px;
 
     @media only screen and (max-width: 991px) {
-      margin-bottom: 16px;
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
       line-height: 40px;
-      text-align: left;
+      margin-bottom: 32px;
     }
   }
 
@@ -174,11 +185,25 @@ main {
     flex-wrap: wrap;
     gap: 4px;
 
+    @media only screen and (max-width: 768px) {
+      gap: 8px;
+    }
+
     &-item {
-      max-width: 450px;
+      //max-width: 450px;
+      //width: call(100% / 3 - 4px);
+      max-width: calc(100% / 3 - 4px);
       width: 100%;
       background: #F2F5F7;
       padding: 40px;
+
+      @media only screen and (max-width: 1199px) {
+        max-width: calc(50% - 4px);
+      }
+
+      @media only screen and (max-width: 768px) {
+        max-width: 100%;
+      }
 
       img {
         margin-bottom: 16px;
@@ -202,6 +227,10 @@ main {
         line-height: 24px;
         max-width: 342px;
         width: 100%;
+
+        @media only screen and (max-width: 768px) {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -238,7 +267,7 @@ main {
         max-width: none;
       }
 
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 768px) {
         width: 100%;
       }
 
@@ -255,6 +284,11 @@ main {
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
+
+        @media only screen and (max-width: 991px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
 
       p {
@@ -278,6 +312,7 @@ main {
     line-height: 40px;
     font-family: Merriweather;
     max-width: 900px;
+    width: 100%;
     margin: 0 auto 80px;
 
     @media only screen and (max-width: 991px) {
@@ -313,6 +348,10 @@ main {
   width: 100%;
   margin: 0 auto;
 
+  @media only screen and (max-width: 991px) {
+    padding: 0;
+  }
+
   h2 {
     color: #0B0F11;
     text-align: left;
@@ -322,14 +361,16 @@ main {
     line-height: 38px;
     margin-bottom: 56px;
     font-family: "Merriweather";
+    max-width: 600px;
+    width: 100%;
 
     @media only screen and (max-width: 991px) {
-      margin-bottom: 16px;
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
       line-height: 40px;
-      text-align: left;
+      text-align: center;
+      margin: 0 auto 40px;
     }
   }
 
@@ -339,6 +380,10 @@ main {
     justify-content: space-between;
     align-items: flex-end;
     gap: 45px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
   }
 
   &-list {
@@ -378,6 +423,11 @@ main {
 
   .aim {
     flex: 1;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
+
     h3 {
       color: #0B0F11;
       font-family: Merriweather;
@@ -386,7 +436,12 @@ main {
       font-weight: 400;
       line-height: 48px;
     }
+
     .aim-list {
+      
+      @media only screen and (max-width: 991px) {
+        padding: 0 15px;
+      }
       &-item {
         position: relative;
 
@@ -409,6 +464,9 @@ main {
 
       img {
         margin: 16px 0;
+        @media only screen and (max-width: 991px) {
+          margin: 0;
+        }
       }
 
       h4 {
@@ -419,18 +477,29 @@ main {
         font-style: normal;
         font-weight: 700;
         line-height: 24px;
+
+        @media only screen and (max-width: 991px) {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
       }
     }
 
     .aim-text {
       border-left: 1px solid rgba(11, 15, 17, 0.2);
-
       margin-left: 22px;
       padding-bottom: 28px;
       padding-left: 46px;
       max-width: 570px;
       width: 100%;
 
+      @media only screen and (max-width: 991px) {
+        padding-bottom: 56px;
+        max-width: none;
+        width: auto;
+      }
 
       p {
         color: #0B0F11;
@@ -439,6 +508,11 @@ main {
         font-weight: 300;
         line-height: 27px;
         margin: 0;
+
+        @media only screen and (max-width: 991px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
   }
@@ -446,11 +520,15 @@ main {
   &-contact {
     background: linear-gradient(180deg, #E2A328 0%, #E5B04A 100%);
     padding: 40px;
-
     flex: 1;
 
+    @media only screen and (max-width: 991px) {
+      max-width: 100%;
+      padding: 40px 15px;
+    }
+
     h3 {
-      color: #402D0A;
+      ccolor: #402D0A;
       font-family: Merriweather;
       font-size: 30px;
       font-style: normal;
@@ -458,17 +536,16 @@ main {
       line-height: 30px;
       margin-bottom: 26px;
       position: relative;
-      padding-left: 40px;
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 28px;
-        height: 28px;
-        background-image: url("../images/exclamation.svg");
-      }
+      //&:before {
+      //  content: '';
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  width: 28px;
+      //  height: 28px;
+      //  background-image: url("../images/exclamation.svg");
+      //}
     }
 
     p {
@@ -477,12 +554,18 @@ main {
       font-style: normal;
       font-weight: 300;
       line-height: 27px; /* 150% */
-
       max-width: 590px;
       width: 100%;
-      &:first-of-type {
-        margin-bottom: 10px;
+
+      @media only screen and (max-width: 991px) {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 24px;
       }
+
+      //&:first-of-type {
+      //  margin-bottom: 10px;
+      //}
     }
 
     .why-btn {
@@ -509,10 +592,10 @@ main {
 }
 
 .survey {
-  padding: 0 40px ;
+  padding: 0 40px;
 
   @media only screen and (max-width: 991px) {
-    padding: 0 15px 55px;
+    padding: 0 0 55px;
   }
 
   &-help {
@@ -912,7 +995,7 @@ main {
       .contact-us {
         max-width: 452px;
         width: 100%;
-        background: #d8e1ea;
+        background: #F2F5F7;
         padding: 40px;
         display: flex;
         flex-direction: column;

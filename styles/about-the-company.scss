@@ -9,16 +9,25 @@ main {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  //padding-bottom: 40px;
-
-  @media only screen and (max-width: 991px) {
-    padding-bottom: 24px;
-  }
 
   .background {
     position: absolute;
     width: 100%;
     height: 100%;
+
+    &-d {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-m {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
 
     img {
       width: 100%;
@@ -37,7 +46,7 @@ main {
     padding: 116px 40px;
 
     @media only screen and (max-width: 991px) {
-      padding: 40px 15px;
+      padding: 40px 15px 192px;
     }
 
     h1 {
@@ -70,6 +79,7 @@ main {
           @media only screen and (max-width: 991px) {
             font-size: 20px;
             line-height: 20px;
+            margin-bottom: 14px;
           }
         }
 
@@ -80,19 +90,18 @@ main {
     }
 
     h2 {
-      margin-bottom: 10px;
-      max-width: 769px;
+      max-width: 710px;
       width: 100%;
-
       color: rgba(255, 255, 255, 0.8);
       font-size: 20px;
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
+      margin-bottom: 10px;
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -104,9 +113,7 @@ main {
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -144,9 +151,18 @@ main {
 
 .how {
   padding: 40px 0 40px;
+  
+  @media only screen and (max-width: 991px) {
+    padding: 0;
+  }
 
   &.how-1 {
     padding-bottom: 80px;
+    
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 56px;
+    }
+
   }
 
   &-content {
@@ -154,12 +170,20 @@ main {
     padding: 0;
     justify-content: space-between;
 
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+
   }
 
   .investigate {
     padding: 40px;
     flex: 1;
     width: 100%;
+    
+    @media only screen and (max-width: 991px) {
+      padding: 40px 15px;
+    }
 
     h3 {
       color: #0B0F11;
@@ -169,15 +193,26 @@ main {
       font-weight: 400;
       line-height: 38px;
       margin-bottom: 40px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 24px;
+      }
     }
 
     p {
-      color: #0B0F11;
+      color: rgba(11, 15, 17, 0.8);
       font-size: 20px;
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
       &:last-of-type {
         margin-bottom: 0;
@@ -192,12 +227,17 @@ main {
 
       &-item {
         position: relative;
-        color: #0B0F11;
+        color: rgba(11, 15, 17, 0.8);
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
         line-height: 29px;
         padding-left: 32px;
+        
+        @media only screen and (max-width: 991px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
 
         &:before {
           content: "";
@@ -217,6 +257,10 @@ main {
     padding: 40px;
     flex: 1;
     width: 100%;
+    
+    @media only screen and (max-width: 991px) {
+      padding: 0 15px 0;
+    }
 
     h3 {
       color: #0B0F11;
@@ -226,6 +270,12 @@ main {
       font-weight: 400;
       line-height: 38px;
       margin-bottom: 40px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 24px;
+      }
     }
 
     & > p {
@@ -234,7 +284,12 @@ main {
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
       &:last-of-type {
         margin-bottom: 0;
@@ -277,7 +332,8 @@ main {
   background: #F2F5F7;
 
   @media only screen and (max-width: 991px) {
-    margin: 55px 15px 40px;
+    margin: 0;
+    padding: 48px 15px;
   }
 
   h2 {
@@ -318,6 +374,8 @@ main {
     @media only screen and (max-width: 991px) {
       text-align: left;
       margin: 0;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }
@@ -327,7 +385,7 @@ main {
   background: #F2F5F7;
 
   @media only screen and (max-width: 991px) {
-    padding: 55px 15px 80px;
+    padding: 0 15px 48px;
   }
 
   &-list {
@@ -340,13 +398,16 @@ main {
     @media only screen and (max-width: 991px) {
       flex-wrap: wrap;
       row-gap: 40px;
+      flex-direction: column;
+      align-items: center;
     }
 
     &-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 246px;
+      //max-width: 246px;
+      max-width: calc(100% / 3 - 82px);
       width: 100%;
 
       @media only screen and (max-width: 991px) {
@@ -386,6 +447,10 @@ main {
       width: 1px;
       background: rgba(11, 15, 17, 0.20);
       margin: 0 40px;
+      
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
     }
   }
 
@@ -399,6 +464,11 @@ main {
     font-style: normal;
     font-weight: 300;
     line-height: 29px;
+    
+    @media only screen and (max-width: 991px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   h2 {
@@ -442,7 +512,7 @@ main {
   padding: 0 40px;
 
   @media only screen and (max-width: 991px) {
-    padding: 0 15px 55px;
+    padding: 0;
   }
 
   &-help {
@@ -842,7 +912,7 @@ main {
       .contact-us {
         max-width: 452px;
         width: 100%;
-        background: #d8e1ea;
+        background: #F2F5F7;
         padding: 40px;
         display: flex;
         flex-direction: column;

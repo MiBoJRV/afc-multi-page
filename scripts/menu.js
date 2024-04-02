@@ -2,6 +2,7 @@
 console.log('sub-menu')
 // Отримуємо всі елементи підменю
 const subMenus = document.querySelectorAll('.sub-menu');
+console.log(subMenus)
 
 // Перебираємо кожен пункт меню і додаємо обробник подій для відображення підменю
 subMenus.forEach(subMenu => {
@@ -93,3 +94,61 @@ mobileMenuLinks.forEach(function (link) {
         document.body.style.overflow = ''; // Забираємо overflow: hidden
     });
 });
+
+// Отримання шляху поточної сторінки без розширення ".html"
+const currentPagePath = window.location.pathname;
+let currentPage = currentPagePath.split('/').pop(); // Отримання останнього шматка шляху
+if (currentPage.endsWith('.html')) {
+    currentPage = currentPage.slice(0, -5); // Видалення ".html" зі строки
+}
+console.log(currentPage)
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll('.menu-items li');
+    let hasSubmenu = false; // Флаг, щоб відстежувати наявність хоча б одного елемента з класом "has-submenu"
+
+    menuItems.forEach(item => {
+        const link = item.querySelector('a').getAttribute('href').split('/').pop(); // Отримання останнього шматка шляху посилання
+        if (link === currentPage && item.closest('.has-submenu') && item.closest('.sub-menu')) {
+            item.closest('.has-submenu').classList.add('current-page');
+            hasSubmenu = true; // Встановлення флагу в true, якщо знайдено елемент з класом "has-submenu"
+        }
+    });
+
+    // Додавання класу "current-page" до елемента <li> в меню, якщо поточна сторінка не має елементів з класом "has-submenu"
+    if (!hasSubmenu && currentPage) {
+        menuItems.forEach(item => {
+            const link = item.querySelector('a').getAttribute('href').split('/').pop(); // Отримання останнього шматка шляху посилання
+            if (link === currentPage) {
+                item.classList.add('current-page');
+            }
+        });
+    }
+});
+
+
+// Додавання класу до відповідного елемента <li> у меню
+// document.addEventListener("DOMContentLoaded", () => {
+//     const menuItems = document.querySelectorAll('.menu-items li');
+//     menuItems.forEach(item => {
+//         const link = item.querySelector('a').getAttribute('href').split('/').pop(); // Отримання останнього шматка шляху посилання
+//         if (link === currentPage) {
+//             item.classList.add('current-page');
+//         }
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const menuItems = document.querySelectorAll('.menu-items li');
+//     menuItems.forEach(item => {
+//         const link = item.querySelector('a').getAttribute('href').split('/').pop(); // Отримання останнього шматка шляху посилання
+//         if (link === currentPage && item.closest('.has-submenu') && item.closest('.sub-menu')) {
+//             item.closest('.has-submenu').classList.add('current-page');
+//         }
+//     });
+// });
+
+
+
+
+

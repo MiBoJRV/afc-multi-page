@@ -9,16 +9,25 @@ main {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  //padding-bottom: 40px;
-
-  @media only screen and (max-width: 991px) {
-    padding-bottom: 24px;
-  }
 
   .background {
     position: absolute;
     width: 100%;
     height: 100%;
+
+    &-d {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-m {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
 
     img {
       width: 100%;
@@ -37,7 +46,7 @@ main {
     padding: 116px 40px;
 
     @media only screen and (max-width: 991px) {
-      padding: 40px 15px;
+      padding: 40px 15px 192px;
     }
 
     h1 {
@@ -70,6 +79,7 @@ main {
           @media only screen and (max-width: 991px) {
             font-size: 20px;
             line-height: 20px;
+            margin-bottom: 14px;
           }
         }
 
@@ -80,19 +90,18 @@ main {
     }
 
     h2 {
-      margin-bottom: 10px;
-      max-width: 769px;
+      max-width: 710px;
       width: 100%;
-
       color: rgba(255, 255, 255, 0.8);
       font-size: 20px;
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
+      margin-bottom: 10px;
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -104,9 +113,7 @@ main {
 
       @media only screen and (max-width: 991px) {
         font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px;
+        line-height: 24px;
       }
     }
 
@@ -146,7 +153,7 @@ main {
   margin: 60px 40px;
 
   @media only screen and (max-width: 991px) {
-    margin: 55px 15px 40px;
+    margin: 43px 15px 40px;
   }
 
   h2 {
@@ -165,11 +172,11 @@ main {
       font-style: normal;
       font-weight: 400;
       line-height: 40px;
-      text-align: left;
     }
   }
 
   p {
+    font-family: "Merriweather Sans";
     color: rgba(11, 15, 17, 0.8);
     text-align: center;
     font-size: 20px;
@@ -180,12 +187,9 @@ main {
     width: 100%;
     margin: 0 auto;
 
-    &:first-of-type {
-      margin-bottom: 20px;
-    }
-
     @media only screen and (max-width: 991px) {
-      text-align: left;
+      font-size: 16px;
+      line-height: 24px;
       margin: 0;
     }
   }
@@ -198,6 +202,10 @@ main {
     padding: 0;
     justify-content: space-between;
 
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+
   }
 
   .investigate {
@@ -207,23 +215,38 @@ main {
     //max-width: 600px;
     width: 100%;
 
+    @media only screen and (max-width: 991px) {
+      padding: 40px 15px;
+    }
+
     h3 {
-      color: #0B0F11;
+      color: rgba(11, 15, 17, 0.8);
       font-family: Merriweather;
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
       line-height: 30px;
       margin-bottom: 40px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     p {
-      color: #0B0F11;
+      color: rgba(11, 15, 17, 0.8);
+      font-family: "Merriweather Sans";
       font-size: 20px;
       font-style: normal;
       font-weight: 300;
       line-height: 29px;
       margin-bottom: 24px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     &-list {
@@ -233,12 +256,22 @@ main {
 
       &-item {
         position: relative;
-        color: #0B0F11;
+        color: rgba(11, 15, 17, 0.8);
+        font-family: "Merriweather Sans";
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
         line-height: 29px;
         padding-left: 32px;
+
+        @media only screen and (max-width: 991px) {
+          @media only screen and (max-width: 991px) {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+          }
+        }
 
         &:before {
           content: "";
@@ -260,6 +293,11 @@ main {
     flex: 1;
     width: 100%;
 
+    @media only screen and (max-width: 991px) {
+      padding: 40px 15px;
+    }
+
+
     h3 {
       color: #FFF;
       font-family: Merriweather;
@@ -268,6 +306,11 @@ main {
       font-weight: 400;
       line-height: 30px;
       margin-bottom: 40px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     & > p {
@@ -277,6 +320,11 @@ main {
       font-weight: 300;
       line-height: 29px;
       margin-bottom: 40px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     &-list {
@@ -284,13 +332,19 @@ main {
       flex-wrap: wrap;
       gap: 40px;
 
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
       &-item {
-        max-width: 280px;
+        //max-width: 280px;
         width: 100%;
+        max-width: calc(100% / 2 - 20px);
 
 
         img {
           margin-bottom: 16px;
+          width: 24px;
         }
 
         p {
@@ -304,6 +358,11 @@ main {
           font-weight: 400;
           line-height: 24px;
 
+          @media only screen and (max-width: 991px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
         }
       }
     }
@@ -316,6 +375,11 @@ main {
   width: 100%;
   margin: 100px auto 120px;
 
+  @media only screen and (max-width: 991px) {
+    padding: 0;
+    margin: 56px auto;
+  }
+
   h2 {
     color: #0B0F11;
     font-family: Merriweather;
@@ -324,10 +388,17 @@ main {
     font-weight: 400;
     line-height: 38px;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 32px;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 15px;
+    }
   }
 
   & > p {
-    color: #0B0F11;
+    color: rgba(11, 15, 17, 0.8);
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -335,6 +406,17 @@ main {
     margin-bottom: 40px;
     max-width: 861px;
     width: 100%;
+
+
+    @media only screen and (max-width: 991px) {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px;
+      text-align: center;
+      margin: 0 auto 48px;
+      padding: 0 15px;
+    }
   }
 
   &-content {
@@ -343,12 +425,25 @@ main {
     justify-content: space-between;
     gap: 50px;
     align-items: flex-end;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
   }
 
   &-list {
     flex: 1;
 
+    @media only screen and (max-width: 991px) {
+      padding: 0 15px;
+    }
+
     &-item {
+
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+      }
+
       &:first-of-type {
         border-bottom: 1px solid rgba(11, 15, 17, 0.20);
         padding-bottom: 40px;
@@ -372,7 +467,7 @@ main {
       }
 
       p {
-        color: #0B0F11;
+        color: rgba(11, 15, 17, 0.7);
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -392,6 +487,12 @@ main {
 
     flex: 1;
 
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      max-width: 100%;
+      padding: 40px 15px;
+    }
+
     h3 {
       color: #402D0A;
       font-family: Merriweather;
@@ -401,17 +502,17 @@ main {
       line-height: 30px;
       margin-bottom: 26px;
       position: relative;
-      padding-left: 40px;
+      //padding-left: 40px;
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 28px;
-        height: 28px;
-        background-image: url("../images/exclamation.svg");
-      }
+      //&:before {
+      //  content: '';
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  width: 28px;
+      //  height: 28px;
+      //  background-image: url("../images/exclamation.svg");
+      //}
     }
 
     p {
@@ -452,10 +553,10 @@ main {
 }
 
 .survey {
-  padding: 0 40px ;
+  padding: 0 40px;
 
   @media only screen and (max-width: 991px) {
-    padding: 0 15px 55px;
+    padding: 0 0 55px;
   }
 
   &-help {
@@ -855,7 +956,7 @@ main {
       .contact-us {
         max-width: 452px;
         width: 100%;
-        background: #d8e1ea;
+        background: #F2F5F7;
         padding: 40px;
         display: flex;
         flex-direction: column;

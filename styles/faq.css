@@ -16,7 +16,14 @@ main {
   font-style: normal;
   font-weight: 700;
   line-height: 27px;
-  margin-bottom: 8px;
+}
+@media only screen and (max-width: 991px) {
+  .banner h2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+  }
 }
 .banner h1 {
   color: #0B0F11;
@@ -26,11 +33,23 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 56px;
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 991px) {
+  .banner h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .faq {
-  padding: 34px 40px;
+  padding: 34px 40px 100px;
   /*Accordion*/
+}
+@media only screen and (max-width: 991px) {
+  .faq {
+    padding: 34px 15px 100px;
+  }
 }
 .faq-content {
   max-width: 900px;
@@ -40,6 +59,12 @@ main {
 .faq .tabs {
   display: flex;
   border-bottom: 1px solid #AABCC8;
+}
+@media only screen and (max-width: 991px) {
+  .faq .tabs {
+    flex-direction: column;
+    border: none;
+  }
 }
 .faq .tab-btn {
   border: none;
@@ -57,9 +82,19 @@ main {
   font-weight: 400;
   line-height: 18px; /* 100% */
   background-color: #ffffff;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 991px) {
+  .faq .tab-btn {
+    max-width: 100%;
+    text-align: left;
+    padding: 21px 0;
+    border-bottom: 1px solid #AABCC8;
+    color: #315576;
+  }
 }
 .faq .tab-btn.active {
-  border-bottom-color: #e2a328;
+  border-bottom: 3px solid #e2a328;
 }
 .faq .tab-btn:hover {
   border-bottom: 3px solid #e2a328;
@@ -68,9 +103,22 @@ main {
   display: none;
   position: relative;
 }
+.faq .tab-content h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 20px 0 12px;
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .faq .tab-content h2 {
+    display: block;
+  }
+}
 .faq .tab-content.active {
   display: block;
-  padding: 20px 0;
+  padding: 20px 0 0;
   background-color: #fff;
 }
 .faq .list-block {
@@ -119,12 +167,6 @@ main {
   line-height: 24px;
   margin: 0;
 }
-@media only screen and (max-width: 991px) {
-  .faq .list-block h4 {
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-}
 .faq .list-block .list {
   max-height: 0;
   overflow: hidden;
@@ -132,7 +174,7 @@ main {
   opacity: 1;
 }
 .faq .list-block .list p {
-  color: #0B0F11;
+  color: rgba(11, 15, 17, 0.8);
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -160,7 +202,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .survey {
-    padding: 0 15px 55px;
+    padding: 0;
   }
 }
 .survey-help {
@@ -520,7 +562,7 @@ main {
 .survey .stepper .slide .contact-us {
   max-width: 452px;
   width: 100%;
-  background: #d8e1ea;
+  background: #F2F5F7;
   padding: 40px;
   display: flex;
   flex-direction: column;

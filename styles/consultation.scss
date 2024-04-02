@@ -7,6 +7,10 @@ main {
   background: #eaeff2;
   padding: 49px 40px;
 
+  @media only screen and (max-width: 991px) {
+    padding: 40px 27px;
+  }
+
   h2 {
     color: rgba(11, 15, 17, 0.7);
     text-align: center;
@@ -16,6 +20,12 @@ main {
     font-weight: 700;
     line-height: 27px;
     margin-bottom: 8px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 14px;
+    }
   }
 
   h1 {
@@ -26,6 +36,11 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 56px;
+    
+    @media only screen and (max-width: 991px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
   }
 }
 
@@ -52,9 +67,10 @@ main {
       font-style: normal;
       font-weight: 400;
       line-height: 40px;
-      text-align: left;
+      text-align: center;
     }
   }
+
 
   p {
     color: rgba(11, 15, 17, 0.8);
@@ -72,7 +88,7 @@ main {
     }
 
     @media only screen and (max-width: 991px) {
-      text-align: left;
+      text-align: center;
       margin: 0;
     }
   }
@@ -113,7 +129,7 @@ main {
   padding: 60px 24px 100px;
 
   @media only screen and (max-width: 991px) {
-    padding: 55px 15px 80px;
+    padding: 16px 15px 60px;
   }
 
   &-list {
@@ -124,8 +140,10 @@ main {
     margin: 0 auto;
 
     @media only screen and (max-width: 991px) {
-      flex-wrap: wrap;
+      //flex-wrap: wrap;
       row-gap: 40px;
+      flex-direction: column;
+      align-items: center;
     }
 
     &-item {
@@ -221,7 +239,7 @@ main {
   padding: 0 40px ;
 
   @media only screen and (max-width: 991px) {
-    padding: 0 15px 55px;
+    padding: 0;
   }
 
   &-help {
@@ -621,7 +639,7 @@ main {
       .contact-us {
         max-width: 452px;
         width: 100%;
-        background: #d8e1ea;
+        background: #F2F5F7;
         padding: 40px;
         display: flex;
         flex-direction: column;

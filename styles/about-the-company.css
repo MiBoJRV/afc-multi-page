@@ -10,15 +10,23 @@ main {
   position: relative;
   overflow: hidden;
 }
-@media only screen and (max-width: 991px) {
-  .banner {
-    padding-bottom: 24px;
-  }
-}
 .banner .background {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .banner .background-d {
+    display: none;
+  }
+}
+.banner .background-m {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .banner .background-m {
+    display: block;
+  }
 }
 .banner .background img {
   width: 100%;
@@ -35,7 +43,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .banner-content {
-    padding: 40px 15px;
+    padding: 40px 15px 192px;
   }
 }
 .banner-content h1 {
@@ -69,25 +77,26 @@ main {
   .banner-content h1 span:nth-of-type(1) {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 14px;
   }
 }
 .banner-content h1 span:nth-of-type(2) {
   font-weight: 700;
 }
 .banner-content h2 {
-  margin-bottom: 10px;
-  max-width: 769px;
+  max-width: 710px;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 991px) {
   .banner-content h2 {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 24px;
   }
 }
 .banner-content p {
@@ -99,9 +108,7 @@ main {
 @media only screen and (max-width: 991px) {
   .banner-content p {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
+    line-height: 24px;
   }
 }
 .banner-content .button-survey {
@@ -133,18 +140,38 @@ main {
 .how {
   padding: 40px 0 40px;
 }
+@media only screen and (max-width: 991px) {
+  .how {
+    padding: 0;
+  }
+}
 .how.how-1 {
   padding-bottom: 80px;
+}
+@media only screen and (max-width: 991px) {
+  .how.how-1 {
+    padding-bottom: 56px;
+  }
 }
 .how-content {
   display: flex;
   padding: 0;
   justify-content: space-between;
 }
+@media only screen and (max-width: 991px) {
+  .how-content {
+    flex-direction: column;
+  }
+}
 .how .investigate {
   padding: 40px;
   flex: 1;
   width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .how .investigate {
+    padding: 40px 15px;
+  }
 }
 .how .investigate h3 {
   color: #0B0F11;
@@ -155,13 +182,26 @@ main {
   line-height: 38px;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 991px) {
+  .how .investigate h3 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+}
 .how .investigate p {
-  color: #0B0F11;
+  color: rgba(11, 15, 17, 0.8);
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 991px) {
+  .how .investigate p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .how .investigate p:last-of-type {
   margin-bottom: 0;
@@ -174,12 +214,18 @@ main {
 }
 .how .investigate-list-item {
   position: relative;
-  color: #0B0F11;
+  color: rgba(11, 15, 17, 0.8);
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
   padding-left: 32px;
+}
+@media only screen and (max-width: 991px) {
+  .how .investigate-list-item {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .how .investigate-list-item:before {
   content: "";
@@ -195,6 +241,11 @@ main {
   flex: 1;
   width: 100%;
 }
+@media only screen and (max-width: 991px) {
+  .how .key {
+    padding: 0 15px 0;
+  }
+}
 .how .key h3 {
   color: #0B0F11;
   font-family: Merriweather;
@@ -204,13 +255,26 @@ main {
   line-height: 38px;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 991px) {
+  .how .key h3 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+}
 .how .key > p {
   color: rgba(11, 15, 17, 0.8);
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 991px) {
+  .how .key > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .how .key > p:last-of-type {
   margin-bottom: 0;
@@ -244,7 +308,8 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .af-center {
-    margin: 55px 15px 40px;
+    margin: 0;
+    padding: 48px 15px;
   }
 }
 .af-center h2 {
@@ -285,6 +350,8 @@ main {
   .af-center p {
     text-align: left;
     margin: 0;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -294,7 +361,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .aspects {
-    padding: 55px 15px 80px;
+    padding: 0 15px 48px;
   }
 }
 .aspects-list {
@@ -308,13 +375,15 @@ main {
   .aspects-list {
     flex-wrap: wrap;
     row-gap: 40px;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .aspects-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 246px;
+  max-width: calc(33.3333333333% - 82px);
   width: 100%;
 }
 @media only screen and (max-width: 991px) {
@@ -353,6 +422,11 @@ main {
   background: rgba(11, 15, 17, 0.2);
   margin: 0 40px;
 }
+@media only screen and (max-width: 991px) {
+  .aspects-list .line {
+    display: none;
+  }
+}
 .aspects p {
   max-width: 900px;
   width: 100%;
@@ -363,6 +437,12 @@ main {
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
+}
+@media only screen and (max-width: 991px) {
+  .aspects p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .aspects h2 {
   color: #0B0F11;
@@ -404,7 +484,7 @@ main {
 }
 @media only screen and (max-width: 991px) {
   .survey {
-    padding: 0 15px 55px;
+    padding: 0;
   }
 }
 .survey-help {
@@ -764,7 +844,7 @@ main {
 .survey .stepper .slide .contact-us {
   max-width: 452px;
   width: 100%;
-  background: #d8e1ea;
+  background: #F2F5F7;
   padding: 40px;
   display: flex;
   flex-direction: column;
